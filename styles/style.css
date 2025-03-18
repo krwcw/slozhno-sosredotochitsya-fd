@@ -1,5 +1,55 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+:root {
+  --bg-color-dark: #000028;
+  --main-color-text-dark: #F1B2CE;
+  --header-bg-dark: url("../images/cover-image-dark.png");
+}
+
 
 .page {
+  background-color: var(--bg-color-dark);
+  color: var(--main-color-text);
+  margin: auto;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+}
+
+.header {
+  background: var(--header-bg-dark) no-repeat;
+  background-size: auto;
+  width: 375px;
+  height: 668px;
+}
+
+.cam-decor {
+  display: flex;
+  ;
+  font-family: IBM Plex Mono;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+letter-spacing: 0%;
+text-align: center;
+color: #FF0070;
+}
+
+.header__title {
+  font-family: IBM Plex Mono;
+  font-weight: 700;
+  font-size: 116px;
+  line-height: 83%;
+  letter-spacing: 0%;
+  color:#DB00FF;
+  text-shadow: #FF0070 4px 4px;
+  padding: 65px 10px 55px 10px;
+}
+
+.header__discription {
+  font-family: IBM Plex Mono;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  letter-spacing: 0%;
+  background-color: #FF0070;
+  padding: 0 10px 0 10px;
+
 }
