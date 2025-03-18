@@ -1,55 +1,201 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 :root {
   --bg-color-dark: #000028;
-  --main-color-text-dark: #F1B2CE;
+  --main-color-text-dark: #f1b2ce;
   --header-bg-dark: url("../images/cover-image-dark.png");
+  --accent-color: #ff0070;
+  --main-font-family: 'IBM Plex Mono', sans-serif;
 }
-
 
 .page {
   background-color: var(--bg-color-dark);
   color: var(--main-color-text);
   margin: auto;
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
 
 .header {
-  background: var(--header-bg-dark) no-repeat;
+  background: var(--header-bg-dark) center;
   background-size: auto;
   width: 375px;
   height: 668px;
+  padding: 10px;
+  position: relative;
 }
 
-.cam-decor {
+.corner-top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
-  ;
-  font-family: IBM Plex Mono;
-font-weight: 400;
-font-size: 18px;
-line-height: 25px;
-letter-spacing: 0%;
-text-align: center;
-color: #FF0070;
+  align-items: center;
+  padding: 10px 15px;
+  color: var(--accent-color);
+}
+.corner-top-right::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 1px;
+  height: 25px;
+  background-color: var(--accent-color);
+}
+
+.corner-top-right::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 1px;
+  background-color: var(--accent-color);
+}
+
+.rec-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  margin: 7px 2px;
+  animation: pulse 1.5s infinite;
+}
+
+.rec-indicator-text {
+  font-family: var(--main-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  margin-right: 7px;
+}
+
+@keyframes pulse {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0.4;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.corner-bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.corner-bottom-left::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 1px;
+  height: 25px;
+  background-color: var(--accent-color);
+}
+
+.corner-bottom-left::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 25px;
+  height: 1px;
+  background-color: var(--accent-color);
+}
+
+.header__theme-menu {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 65px 0;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-item {
+  font-family: var(--main-font-family);
+  color: var(--accent-color);
+}
+
+.header__theme-menu-button {
+  width: 70px;
+  height: 26px;
+  background-color: transparent;
+  text-transform: lowercase;
+  border: none;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
 }
 
 .header__title {
-  font-family: IBM Plex Mono;
+  font-family: var(--main-font-family);
   font-weight: 700;
   font-size: 116px;
   line-height: 83%;
   letter-spacing: 0%;
-  color:#DB00FF;
-  text-shadow: #FF0070 4px 4px;
-  padding: 65px 10px 55px 10px;
+  color: #db00ff;
+  text-shadow: var(--accent-color) 4px 4px;
+  padding: 0 0 55px 0;
 }
 
 .header__discription {
-  font-family: IBM Plex Mono;
+  font-family: var(--main-font-family);
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
   letter-spacing: 0%;
-  background-color: #FF0070;
+  background-color: var(--accent-color);
   padding: 0 10px 0 10px;
+  color: var(--bg-color-dark);
+}
 
+.content {
+  display: grid;
+  gap: 50px;
+  padding: 40px 10px;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--bg-color-dark);
+}
+
+.question {
+  display: grid;
+  gap: 20px;
+}
+
+.block-title {
+  font-family: var(--main-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.content__card {
+  display: grid;
+  gap: 10px;
+}
+
+.content__card-title {
+  font-family: var(--main-font-family);
+  color: var(--bg-color-dark);
+}
+
+.content__card-text {
+  font-family: var(--main-font-family);
+  color: var(--main-color-text-dark);
+  font-weight: 400;
+}
+
+.link-decor {
+  text-shadow: var(--accent-color) 2px 2px;
 }
