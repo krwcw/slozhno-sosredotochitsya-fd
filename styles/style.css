@@ -1,15 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-:root {
-  --bg-color-dark: #000028;
-  --main-color-text-dark: #f1b2ce;
-  --header-bg-dark: url("../images/cover-image-dark.png");
-  --accent-color: #FF0070;
-  --accent-color-transparent: rgba(255, 0, 112, 0.4);
-  --main-font-family: 'IBM Plex Mono', sans-serif;
-}
 
 .page {
-  background-image: var(--header-bg-dark);
+  background-image: var(--header-bg);
   background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -19,9 +11,10 @@
 }
 
 .header {
-  height: 100vh;
-  min-height: 668px;
-  padding: 10px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  height: calc(100vh - 20px);
+  min-height: 648px;
   position: relative;
 }
 
@@ -31,27 +24,27 @@
   right: 0;
   display: flex;
   align-items: center;
-  padding: 10px 15px;
-  color: var(--accent-color);
+  padding: 1px 6px;
+  color: var(--nav-color);
 }
 .corner-top-right::after {
   content: "";
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0;
+  right: 0;
   width: 1px;
   height: 25px;
-  background-color: var(--accent-color);
+  background-color: var(--nav-color);
 }
 
 .corner-top-right::before {
   content: "";
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0;
+  right: 0;
   width: 25px;
   height: 1px;
-  background-color: var(--accent-color);
+  background-color: var(--nav-color);
 }
 
 .rec-indicator {
@@ -92,28 +85,28 @@
 .corner-bottom-left::after {
   content: "";
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 0;
+  left: 0;
   width: 1px;
   height: 25px;
-  background-color: var(--accent-color);
+  background-color: var(--nav-color);
 }
 
 .corner-bottom-left::before {
   content: "";
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 0;
+  left: 0;
   width: 25px;
   height: 1px;
-  background-color: var(--accent-color);
+  background-color: var(--nav-color);
 }
 
 .header__theme-menu {
+  grid-column: 2 / 3;
+  display: grid;
+  place-content: center end;
   width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  padding: 65px 0;
 }
 
 .header__theme-menu-list {
@@ -124,7 +117,7 @@
 
 .header__theme-menu-item {
   font-family: var(--main-font-family);
-  color: var(--accent-color);
+  color: var(--nav-color);
 }
 
 .header__theme-menu-button {
@@ -136,42 +129,52 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--accent-color-transparent);
+  outline: 1px solid var(--nav-color-transparent);
   cursor: pointer;
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--nav-color);
   pointer-events: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-block-end: 1px solid var(--nav-color);
 }
 
 .header__title {
   font-family: var(--main-font-family);
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  color: #db00ff;
+  line-height: 83%;
+  color: var(--header-title);
+  place-self: center start;
   text-shadow: var(--accent-color) 4px 4px;
-  padding: 0 0 55px 0;
+  grid-column: 1 / 3;
 }
 
 .header__discription {
+  place-self: center;
   font-family: var(--main-font-family);
   font-weight: 700;
   font-size: 18px;
   background-color: var(--accent-color);
-  padding: 0 10px 0 10px;
-  color: var(--bg-color-dark);
+  color: var(--text-title);
+  grid-column: 1 / 3;
+  height: max-content;
 }
 
 .content {
   display: grid;
   gap: 50px;
   padding: 40px 0;
+  width: 100%;
 }
 
 .title-decor {
   background-color: var(--accent-color);
-  color: var(--bg-color-dark);
+  color: var(--text-title);
 }
 
 .content__block {
@@ -200,44 +203,44 @@
 
 .content__card-title {
   font-family: var(--main-font-family);
-  color: var(--bg-color-dark);
   grid-template-rows: repeat(2, max-content);
 }
 
 .content__card-text {
   font-family: var(--main-font-family);
-  color: var(--main-color-text-dark);
+  color: var(--main-color-text);
   font-weight: 400;
 }
 
 .link-decor {
-  text-shadow: var(--accent-color) 2px 2px;
+  text-shadow: var(--accent-color) 1px 1px;
   text-decoration: none;
 }
 
 .link-decor:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
-.link-decor:focus {
-  outline: 1px solid var(--main-color-text-dark);
+.link-decor:focus-visible {
+  outline: 1px solid var(--main-color-text);
 }
 
 .content__card-subtitle {
   font-family: var(--main-font-family);
   font-weight: 400;
   margin-block-start: 10px;
+  color: var(--text-title);
 }
 
 .content__card-images {
   display: grid;
-  grid-template-columns: ;
   gap: 10px;
 }
 
 .content__card-item img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -248,19 +251,17 @@
 .footer {
   display: grid;
   place-content: center;
-  height: 100vh;
-  min-height: 668px;
-  padding: 10px;
+  height: calc(100vh - 20px);
+  min-height: 648px;
   position: relative;
 }
 
 .footer__title {
   font-family: var(--main-font-family);
   font-weight: 700;
-  font-size: 116px;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
-  letter-spacing: 0%;
-  color: #db00ff;
+  color: var(--header-title);
   text-shadow: var(--accent-color) 4px 4px;
 }
 
@@ -268,10 +269,7 @@
   .header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .header__theme-menu {
-    grid-column: 1 / 3;
+    height: calc(100vh - 40px);
   }
 
   .header__title {
@@ -306,8 +304,6 @@
 
   .content__card-images {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, minmax(min-content max-content));
-    grid-auto-flow: dense;
     gap: 20px;
     margin-block-start: 10px;
   }
@@ -341,6 +337,14 @@
     grid-column: 2 / 4;
     grid-row: 3 / 4;
   }
+
+  .footer {
+    height: calc(100vh - 40px);
+  }
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
 }
 
 @media (width >= 1024px) {
@@ -354,16 +358,13 @@
   }
 
   .header__theme-menu {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 0;
+    grid-column: 1/ 3;
+    place-content: start center;
   }
   
   .header__theme-menu-list {
     display: flex;
     flex-direction: row;
     gap: 10px;
-
+  }
 }
-
