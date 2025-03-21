@@ -16,7 +16,7 @@
   --header-title-light: #FFC2E6;
   --text-title-light: #353430;
   --nav-color-light: #353430;
-  --nav-color-transparent-light: rgba(53, 52, 48, 0.4)
+  --nav-color-transparent-light: rgba(53, 52, 48, 0.4);
 }
 
 .theme-light .page {
@@ -55,6 +55,6 @@
     --header-title-light: #FFC2E6;
     --text-title-light: #353430;
     --nav-color-light: #353430;
-    --nav-color-transparent-light: rgba(53, 52, 48, 0.4)
+    --nav-color-transparent-light: rgba(53, 52, 48, 0.4);
   }
 }
