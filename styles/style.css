@@ -170,6 +170,8 @@
   gap: 50px;
   padding: 40px 0;
   width: 100%;
+  margin-block-start: 40px;
+  margin-block-end: 40px;
 }
 
 .title-decor {
@@ -301,6 +303,12 @@
 
   .page {
     padding: 20px;
+  }
+
+  .content {
+    margin-block-start: 60px;
+    margin-block-end: 60px;
+    gap: 80px;
   }
 
   .content__card-images {
