@@ -26,7 +26,7 @@
 
 .decorated-zone::before {
   position: absolute;
-  content: '';
+  content: "";
   width: 25px;
   height: 25px;
   top: 10px;
@@ -40,7 +40,7 @@
 
 .decorated-zone::after {
   position: absolute;
-  content: '';
+  content: "";
   width: 25px;
   height: 25px;
   left: 10px;
@@ -51,7 +51,6 @@
   padding: 1px 6px;
   color: var(--nav-color);
 }
-
 
 .rec-indicator {
   display: var(--rec-display);
@@ -79,16 +78,15 @@
 
 @keyframes pulse {
   0% {
-      opacity: 1;
+    opacity: 1;
   }
   50% {
-      opacity: 0.4;
+    opacity: 0.4;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
-
 
 .header__theme-menu {
   grid-row: 1 / 2;
@@ -164,7 +162,7 @@
   display: grid;
   gap: 49px;
   margin-block-start: 40px;
-  margin-block-end: 42px
+  margin-block-end: 42px;
 }
 
 .title-decor {
@@ -177,7 +175,7 @@
   gap: 20px;
 }
 
-.block-title {
+.content__block-title {
   grid-column: 1 / 2;
   font-family: var(--main-font-family);
   font-size: 18px;
@@ -276,19 +274,18 @@
   .decorated-zone::before {
     top: 20px;
     right: 20px;
- 
   }
-  
+
   .decorated-zone::after {
     left: 20px;
     bottom: 20px;
   }
-  
+
   .rec-indicator {
     right: 27px;
     top: 27px;
   }
-  
+
   .rec-indicator-text {
     top: 20px;
     right: 48px;
@@ -315,7 +312,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
   }
-
 
   .content__block-item:not(.grid-column) {
     grid-column: 2 / 4;
@@ -379,18 +375,16 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     place-self: center;
   }
-
 }
 
 @media (width >= 1024px) {
   .header {
     padding: 20px 0;
   }
-  
+
   .grid-column {
     grid-template-columns: repeat(3, 1fr);
   }
-
 
   .content__block {
     gap: 20px;
@@ -399,7 +393,7 @@
   .content__block:has(.grid-column) {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: 40px
+    gap: 40px;
   }
 
   .header__theme-menu {
@@ -408,7 +402,7 @@
     place-content: start center;
     padding-right: 0;
   }
-  
+
   .header__theme-menu-list {
     display: flex;
     flex-direction: row;
@@ -418,5 +412,4 @@
   .header__discription {
     margin-bottom: 57px;
   }
-
 }
