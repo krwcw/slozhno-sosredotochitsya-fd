@@ -40,3 +40,28 @@
 .theme-dark .header__discription {
   color: var(--text-title-dark);
 }
+
+@media (prefers-color-scheme: dark) {
+  .theme-dark .page {
+    /* Вам также нужно будет написать ряд подобных селекторов */
+    --bg-color: var(--bg-color-dark);
+    --main-color-text: var(--main-color-text-dark);
+    --header-bg: var(--header-bg-dark);
+    --accent-color: var(--accent-color-dark);
+    --accent-color-transparent: var(--accent-color-transparent-dark);
+    --header-tl: var(--header-tl-dark);
+    --text-title: var(--text-title-dark);
+    --nav-color: var(--nav-color-dark);
+    --nav-color-transparent: var(--nav-color-transparent-dark);
+    
+  }
+  
+  .theme-dark .block-title {
+    color: var(--accent-color);
+  }
+  
+  .theme-dark .header__discription {
+    color: var(--text-title-dark);
+  }
+  
+}

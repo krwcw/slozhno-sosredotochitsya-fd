@@ -47,14 +47,30 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    --bg-color-light: #FFF1F7;
-    --main-color-text-light: #353430;
-    --header-bg-light: url("../images/cover-image-light.png");
-    --accent-color-light: #FF8DCB;
-    --header-title-light: #FFC2E6;
-    --text-title-light: #353430;
-    --nav-color-light: #353430;
-    --nav-color-transparent-light: rgba(53, 52, 48, 0.4);
+  .theme-light .page {
+    --bg-color: var(--bg-color-light);
+    --main-color-text: var(--main-color-text-light);
+    --header-bg: var(--header-bg-light);
+    --accent-color: var(--accent-color-light);
+    --header-title: var(--header-title-light);
+    --text-title: var(--text-title-light);
+    --nav-color: var(--nav-color-light);
+    --nav-color-transparent: var(--nav-color-transparent-light);
+  }
+  
+  .theme-light .rec-indicator {
+    display: none;
+  }
+  
+  .theme-light .rec-indicator-text {
+    display: none;
+  }
+  
+  .theme-light .block-title {
+    color: var(--text-title)
+  }
+  
+  .theme-light .header__theme-item {
+    color: var(--text-title)
   }
 }
