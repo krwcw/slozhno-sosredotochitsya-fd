@@ -317,7 +317,7 @@
   }
 
   .content__block:not(.wide-section) {
-    gap: 20px;
+    
   }
 
   .content__block-item:not(.wide-section) {
@@ -399,6 +399,10 @@
 
   .header__discription {
     margin-block-end: 57px;
+  }
+
+  .content__block:not(.wide-section) {
+    gap: 20px;
   }
 
 }
