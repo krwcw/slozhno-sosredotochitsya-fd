@@ -106,17 +106,17 @@
   color: var(--nav-color);
   font-size: 18px;
   line-height: 18px;
-  text-align: center;
 }
 
 .header__theme-menu-button {
-  display: flex;
-  place-content: center;
   width: 70px;
   height: 26px;
+  font-size: 18px;
+  line-height: 1;
   background-color: transparent;
   text-transform: lowercase;
   border: none;
+  padding-bottom: 5px;
 }
 
 .header__theme-menu-button:hover {
@@ -208,7 +208,7 @@
   font-size: 18px;
 }
 
-.min-font-weight {
+.content__card-subtitle {
   font-weight: 400;
 }
 
@@ -226,7 +226,7 @@
 }
 
 .link-decor:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--main-color-text);
   cursor: pointer;
 }
 
